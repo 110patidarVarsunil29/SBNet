@@ -20,6 +20,7 @@ public class UserService implements IUserService {
 		return iUserDao.findAll();
 	}
 	public UserDTO findById(long empId){
+		
 		return this.iUserDao.findById(empId).orElseThrow(() -> new ResourceNotFoundException("User not found with id :" + empId));
 	}
 	public UserDTO saveUser(UserDTO user) {
@@ -38,4 +39,5 @@ public class UserService implements IUserService {
 		this.iUserDao.delete(user);
 		return ResponseEntity.ok().build();
 	}
+	
 }

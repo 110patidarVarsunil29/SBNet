@@ -13,4 +13,7 @@ public interface IUserService {
 	public UserDTO saveUser(UserDTO user);
 	public UserDTO updateUser(UserDTO user, long empId);
 	public ResponseEntity<UserDTO> deleteUser(long empId);
-}
+	/*
+	 * public UserDTO findByEmpIdSorted(long empId);
+	 */
+	}
